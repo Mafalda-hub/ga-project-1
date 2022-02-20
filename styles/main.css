@@ -1,0 +1,101 @@
+body {
+  text-align: center;
+}
+/* give some space to the line between the title and the board  */
+hr {
+  width: 500px;
+}
+
+#errors {
+  color: aqua;
+}
+
+/* 4x4 grid */
+#board {
+  width: 328px;
+  height: 328px;
+
+  /* background-color: lightgrey; */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* each cell inside of the grid */
+.tile {
+  width: 80px;
+  height: 80px;
+  border: 1px solid;
+
+  /* text */
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* each number that fills the board */
+.number {
+  width: 74px;
+  height: 70px;
+  border: 2px solid black;
+  margin: 2px;
+
+  /* text */
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* options available */
+#digits {
+  width: 328px;
+  height: 80px;
+
+  /* background-color: lightgrey; */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* number selected on the available options */
+.number-selected {
+  /* background-color: blueviolet; */
+}
+
+.tile-start {
+  /* background-color: whitesmoke; */
+}
+
+.horizontal-line {
+  border-bottom: 1px thick;
+}
+
+.vertical-line {
+  border-right: 1px solid;
+}
+
+#0-0 {
+  background-color: blueviolet;
+}
+
+.tile-start#0-1,
+.tile-start#0-2 {
+  color: yellow;
+}
+
+#\30 -0,
+#\31 -0 {
+  background-color: palegreen;
+}
+
+#\30 -1,
+#\31 -1 {
+  background-color: palegreen;
+  /* border-right: 2px solid black; */
+}
