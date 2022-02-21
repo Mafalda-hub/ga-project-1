@@ -1,8 +1,8 @@
-body {
+/* body {
   text-align: center;
 }
 /* give some space to the line between the title and the board  */
-hr {
+/* hr {
   width: 500px;
 }
 
@@ -11,48 +11,48 @@ hr {
 }
 
 /* 4x4 grid */
-#board {
+/* #board {
   width: 328px;
-  height: 328px;
+  height: 328px; */
 
-  /* background-color: lightgrey; */
-  margin: 0 auto;
+/* background-color: lightgrey; */
+/* margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* each cell inside of the grid */
-.tile {
+/* .tile {
   width: 80px;
   height: 80px;
   border: 1px solid;
 
   /* text */
-  font-size: 20px;
+/* font-size: 20px;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; 
+}*/
 
 /* each number that fills the board */
-.number {
+/* .number {
   width: 74px;
   height: 70px;
   border: 2px solid black;
   margin: 2px;
 
   /* text */
-  font-size: 20px;
+/* font-size: 20px;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* options available */
-#digits {
+/* #digits {
   width: 328px;
   height: 80px;
 
@@ -61,12 +61,12 @@ hr {
   display: flex;
   flex-wrap: wrap;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* number selected on the available options */
-.number-selected {
+/* .number-selected {
   background-color: pink;
-}
+} */
 
 /* .tile-start {
   background-color: whitesmoke;
@@ -80,7 +80,7 @@ hr {
   border-right: 1px solid;
 } */
 
-#\30 -0,
+/* #\30 -0,
 #\30 -1,
 #\31 -0,
 #\31 -1 {
@@ -105,4 +105,193 @@ hr {
 #\33 -2,
 #\33 -3 {
   background-color: paleturquoise;
+} */
+
+body {
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+}
+/* give some space to the line between the title and the board  */
+/* hr {
+  width: 500px;
+} */
+
+#errors {
+  color: black;
+}
+
+/* 4x4 grid */
+#board {
+  width: 450px;
+  height: 450px;
+
+  background-color: yellow;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* each cell inside of the grid */
+.tile {
+  width: 48px;
+  height: 48px;
+  border: 1px solid black;
+
+  /* text */
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* each number that fills the board */
+.number {
+  width: 46px;
+  height: 46px;
+  border: 1px solid black;
+  margin: 1px;
+
+  /* text */
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* options available */
+#digits {
+  width: 450px;
+  height: 50px;
+
+  background-color: azure;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* number selected on the available options */
+.number-selected {
+  background-color: rgb(215, 235, 253);
+}
+
+/* .tile-start {
+  background-color: whitesmoke;
+} */
+
+/* .horizontal-line {
+  border-bottom: 1px thick;
+}
+
+.vertical-line {
+  border-right: 1px solid;
+} */
+
+#\30 -0,
+#\30 -1,
+#\30 -2,
+#\31 -0,
+#\31 -1,
+#\31 -2,
+#\32 -0,
+#\32 -1,
+#\32 -2 {
+  background-color: rgb(215, 235, 253);
+}
+
+#\30 -3,
+#\30 -4,
+#\30 -5,
+#\31 -3,
+#\31 -4,
+#\31 -5,
+#\32 -3,
+#\32 -4,
+#\32 -5 {
+  background-color: azure;
+}
+
+#\30 -6,
+#\30 -7,
+#\30 -8,
+#\31 -6,
+#\31 -7,
+#\31 -8,
+#\32 -6,
+#\32 -7,
+#\32 -8 {
+  background-color: rgb(215, 235, 253);
+}
+
+#\33 -0,
+#\33 -1,
+#\33 -2,
+#\34 -0,
+#\34 -1,
+#\34 -2,
+#\35 -0,
+#\35 -1,
+#\35 -2 {
+  background-color: azure;
+}
+
+#\33 -3,
+#\33 -4,
+#\33 -5,
+#\34 -3,
+#\34 -4,
+#\34 -5,
+#\35 -3,
+#\35 -4,
+#\35 -5 {
+  background-color: rgb(215, 235, 253);
+}
+
+#\33 -6,
+#\33 -7,
+#\33 -8,
+#\34 -6,
+#\34 -7,
+#\34 -8,
+#\35 -6,
+#\35 -7,
+#\35 -8 {
+  background-color: azure;
+}
+
+#\36 -0,
+#\36 -1,
+#\36 -2,
+#\37 -0,
+#\37 -1,
+#\37 -2,
+#\38 -0,
+#\38 -1,
+#\38 -2 {
+  background-color: rgb(215, 235, 253);
+}
+
+#\36 -3,
+#\36 -4,
+#\36 -5,
+#\37 -3,
+#\37 -4,
+#\37 -5,
+#\38 -3,
+#\38 -4,
+#\38 -5 {
+  background-color: azure;
+}
+
+#\36 -6,
+#\36 -7,
+#\36 -8,
+#\37 -6,
+#\37 -7,
+#\37 -8,
+#\38 -6,
+#\38 -7,
+#\38 -8 {
+  background-color: rgb(215, 235, 253);
 }
