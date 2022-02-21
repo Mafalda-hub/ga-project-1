@@ -7,7 +7,7 @@ hr {
 }
 
 #errors {
-  color: aqua;
+  color: black;
 }
 
 /* 4x4 grid */
@@ -56,7 +56,7 @@ hr {
   width: 328px;
   height: 80px;
 
-  /* background-color: lightgrey; */
+  background-color: peachpuff;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -65,37 +65,44 @@ hr {
 
 /* number selected on the available options */
 .number-selected {
-  /* background-color: blueviolet; */
+  background-color: pink;
 }
 
-.tile-start {
-  /* background-color: whitesmoke; */
-}
+/* .tile-start {
+  background-color: whitesmoke;
+} */
 
-.horizontal-line {
+/* .horizontal-line {
   border-bottom: 1px thick;
 }
 
 .vertical-line {
   border-right: 1px solid;
-}
-
-#0-0 {
-  background-color: blueviolet;
-}
-
-.tile-start#0-1,
-.tile-start#0-2 {
-  color: yellow;
-}
+} */
 
 #\30 -0,
-#\31 -0 {
+#\30 -1,
+#\31 -0,
+#\31 -1 {
   background-color: palegreen;
 }
 
-#\30 -1,
-#\31 -1 {
-  background-color: palegreen;
-  /* border-right: 2px solid black; */
+#\30 -2,
+#\30 -3,
+#\31 -2,
+#\31 -3 {
+  background-color: palegoldenrod;
+}
+#\32 -0,
+#\32 -1,
+#\33 -0,
+#\33 -1 {
+  background-color: palevioletred;
+}
+
+#\32 -2,
+#\32 -3,
+#\33 -2,
+#\33 -3 {
+  background-color: paleturquoise;
 }

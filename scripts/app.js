@@ -4,17 +4,18 @@ const tileSelected = null;
 
 let errors = 0;
 
-// change to start board
+// STARTING BOARD
 const board = ['13--', '-2-3', '3-2-', '--31'];
 
 const solution = ['1342', '4213', '3124', '2431'];
 
+// https://www.javatpoint.com/javascript-onload
 window.onload = function () {
   setGame();
 };
 
 function setGame() {
-  // digits 1-4
+  // available options
   for (let i = 1; i <= 4; i++) {
     const number = document.createElement('div');
     number.id = i;
@@ -31,17 +32,19 @@ function setGame() {
     for (let c = 0; c < 4; c++) {
       // create div
       const tile = document.createElement('div');
-      tile.id = r.toString() + '-' + c.toString();
+      tile.id = r.toString() + '-' + c.toString(); //assigned id according to the position of the cells
+      // removes the dash from the solution array
       if (board[r][c] != '-') {
         tile.innerText = board[r][c];
-        tile.classList.add('tile-start');
+        // give it other color to know what the start board is
+        // tile.classList.add('tile-start');
       }
-      if (r === 2) {
-        tile.classList.add('horizontal-line');
-      }
-      if (c === 2) {
-        tile.classList.add('vertical-line');
-      }
+      // if (r === 2) {
+      //   tile.classList.add('horizontal-line');
+      // }
+      // if (c === 2) {
+      //   tile.classList.add('vertical-line');
+      // }
 
       // everytime you click it calls de function selectTile
       tile.addEventListener('click', selectTile);
