@@ -1,3 +1,5 @@
+/* https://fonts.google.com/specimen/Shadows+Into+Light#standard-styles */
+
 body {
   font-family: 'Shadows Into Light', cursive;
   text-align: center;
@@ -66,17 +68,6 @@ body {
 .number-selected {
   background-color: rgb(215, 235, 253);
 }
-
-/* .tile-start {
-  background-color: whitesmoke;
-} */
-
-/* .horizontal-line {
-  border-bottom: 1px thick;
-}
-.vertical-line {
-  border-right: 1px solid;
-} */
 
 #\30 -0,
 #\30 -1,
