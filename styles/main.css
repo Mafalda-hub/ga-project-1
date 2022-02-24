@@ -65,13 +65,23 @@ body {
 
 /* options available */
 #digits {
-  width: 450px;
-  height: 50px;
-
   background-color: azure;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+}
+.harddi {
+  width: 450px;
+  height: 50px;
+}
+.easydi {
+  width: 328px;
+  height: 80px;
+}
+
+.easydi .number {
+  width: 78px;
+  height: 78px;
 }
 
 /* number selected on the available options */

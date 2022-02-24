@@ -67,12 +67,14 @@ function clearBoard() {
 function setGame(mode) {
   let gameboard;
   const boardElement = document.getElementById('board');
+  const digitsElement = document.getElementById('digits');
   if (mode === 'hard') {
     gridSize = 9;
     gameboard = hardboard;
     solution = hardsolution;
     boardElement.classList.replace('easy', 'hard');
     gameMode = 'hard';
+    digitsElement.classList.replace('easydi', 'harddi');
   } else {
     gridSize = 4;
     gameboard = easyboard;
@@ -80,6 +82,8 @@ function setGame(mode) {
     boardElement.classList.remove('hard');
     boardElement.classList.add('easy');
     gameMode = 'easy';
+    digitsElement.classList.remove('harddi');
+    digitsElement.classList.add('easydi');
   }
 
   // available options
