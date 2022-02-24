@@ -1,9 +1,9 @@
-//  ? 9x9BOARD
-
 let numSelected = null;
 const tileSelected = null;
 const errorElement = document.getElementById('errors');
+// const restartButton = document.getElementById('restartButton');
 
+// let restartButton;
 let errors = 0;
 
 // STARTING BOARD
@@ -67,6 +67,7 @@ function setGame(mode) {
   } else {
     gameboard = easyboard;
   }
+
   // available options
   for (let i = 1; i <= 9; i++) {
     const number = document.createElement('div');
@@ -99,6 +100,10 @@ function setGame(mode) {
     }
   }
 }
+
+// function restartButton() {
+//   setMode();
+// }
 
 // create a function to select different numbers from the available options
 function selectNumber() {
@@ -136,3 +141,5 @@ function selectTile() {
     }
   }
 }
+
+// restartButton.addEventListener('click', restartButton);

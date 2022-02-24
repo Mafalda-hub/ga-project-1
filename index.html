@@ -13,7 +13,6 @@
   </head>
   <body>
     <h1>Sudoku 🎮</h1>
-    <button>reset</button>
     <button onclick="setMode('easy')">easy</button>
     <button onclick="setMode('hard')">hard</button>
     <h2 id="errors">0/3</h2>
@@ -22,6 +21,8 @@
     <br />
     <div id="digits"></div>
     <!-- using js to create 4 divs instead of creating them 4x here -->
+    <h3 id="restartButton">restart?</h3>
+
     <script src="./scripts/app.js"></script>
   </body>
 </html>
