@@ -1,9 +1,7 @@
 let numSelected = null;
 const tileSelected = null;
-const errorElement = document.getElementById('errors');
-// const restartButton = document.getElementById('restartButton');
+const restartButton = document.getElementById('restartButton');
 
-// let restartButton;
 let errors = 0;
 
 // STARTING BOARD
@@ -49,6 +47,11 @@ window.onload = function () {
 };
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild
 function setMode(mode) {
+  clearBoard();
+  setGame(mode);
+}
+
+function clearBoard() {
   const board = document.getElementById('board');
   while (board.firstChild) {
     board.removeChild(board.firstChild);
@@ -57,7 +60,6 @@ function setMode(mode) {
   while (digits.firstChild) {
     digits.removeChild(digits.firstChild);
   }
-  setGame(mode);
 }
 
 function setGame(mode) {
@@ -101,9 +103,12 @@ function setGame(mode) {
   }
 }
 
-// function restartButton() {
-//   setMode();
-// }
+function restartGame() {
+  clearBoard();
+  errors = 0;
+  updateScore(errors);
+  setGame();
+}
 
 // create a function to select different numbers from the available options
 function selectNumber() {
@@ -131,15 +136,16 @@ function selectTile() {
       // increases the errors everytime you make a mistake according to the solutions of the game
       // TO ADD: LIMIT OF 3 ERRORS
       errors += 1;
-      document.getElementById('errors').innerText = errors;
-
+      updateScore(errors);
       if (errors >= 3) {
-        errorElement.innerText = 'Game Over!';
-        // document.getElementById('#errors');
-        // errors.innerHTML = 'GAME OVER';
+        updateScore('Game Over!');
       }
     }
   }
 }
 
-// restartButton.addEventListener('click', restartButton);
+function updateScore(value) {
+  document.getElementById('errors').innerText = value;
+}
+
+restartButton.addEventListener('click', restartGame);
