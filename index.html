@@ -15,14 +15,29 @@
     <h1>Sudoku 🎮</h1>
     <button onclick="setMode('easy')">easy</button>
     <button onclick="setMode('hard')">hard</button>
-    <h2 id="errors">0/3</h2>
-    <div id="board"></div>
-    <!-- 4 divs w/ different ids -->
-    <br />
-    <div id="digits"></div>
-    <!-- using js to create 4 divs instead of creating them 4x here -->
-    <h3 id="restartButton">restart?</h3>
-
+    <section>
+      <div id="rules">
+        <p><strong>Hi! These are the Sudoku rules:</strong></p>
+        <p>This game is pretty straightforward.</p>
+        <p>
+          If you're playing the easy version, you need to fill any row, column
+          and 2x2 region with the numbers 1-4
+        </p>
+        <p>
+          If you're playing the hard version, you need to fill any row, column
+          and 3x3 region with the numbers 1-9
+        </p>
+      </div>
+      <div>
+        <h2 id="errors">0/3</h2>
+        <div id="board"></div>
+        <!-- 4 divs w/ different ids -->
+        <br />
+        <div id="digits"></div>
+        <!-- using js to create 4 divs instead of creating them 4x here -->
+        <h3 id="restartButton">restart?</h3>
+      </div>
+    </section>
     <script src="./scripts/app.js"></script>
   </body>
 </html>
