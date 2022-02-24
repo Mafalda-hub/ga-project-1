@@ -1,21 +1,17 @@
 let numSelected = null;
 const tileSelected = null;
 const restartButton = document.getElementById('restartButton');
+let gridSize;
+let solution;
+let gameMode;
 
 let errors = 0;
 
 // STARTING BOARD
-const easyboard = [
-  '5---17-6-',
-  '42-5-381-',
-  '---62--9-',
-  '---458-31',
-  '71-3--9-8',
-  '3-4-7-52-',
-  '8-7-3-2--',
-  '6-92-5-74',
-  '-5-74-6--',
-];
+
+const easyboard = ['13--', '-2-3', '3-2-', '--31'];
+
+const easysolution = ['1342', '4213', '3124', '2431'];
 
 const hardboard = [
   '5---17-6-',
@@ -29,7 +25,7 @@ const hardboard = [
   '-5-74---3',
 ];
 
-const solution = [
+const hardsolution = [
   '593817462',
   '426593817',
   '178624395',
@@ -51,6 +47,12 @@ function setMode(mode) {
   setGame(mode);
 }
 
+function restartGame() {
+  errors = 0;
+  updateScore(errors);
+  setMode(gameMode);
+}
+
 function clearBoard() {
   const board = document.getElementById('board');
   while (board.firstChild) {
@@ -64,14 +66,24 @@ function clearBoard() {
 
 function setGame(mode) {
   let gameboard;
+  const boardElement = document.getElementById('board');
   if (mode === 'hard') {
+    gridSize = 9;
     gameboard = hardboard;
+    solution = hardsolution;
+    boardElement.classList.replace('easy', 'hard');
+    gameMode = 'hard';
   } else {
+    gridSize = 4;
     gameboard = easyboard;
+    solution = easysolution;
+    boardElement.classList.remove('hard');
+    boardElement.classList.add('easy');
+    gameMode = 'easy';
   }
 
   // available options
-  for (let i = 1; i <= 9; i++) {
+  for (let i = 1; i <= gridSize; i++) {
     const number = document.createElement('div');
     number.id = i;
     number.innerText = i;
@@ -83,8 +95,8 @@ function setGame(mode) {
   }
 
   // board 9x9
-  for (let r = 0; r < 9; r++) {
-    for (let c = 0; c < 9; c++) {
+  for (let r = 0; r < gridSize; r++) {
+    for (let c = 0; c < gridSize; c++) {
       // create div
       const tile = document.createElement('div');
       tile.id = r.toString() + '-' + c.toString(); //assigned id according to the position of the cells
@@ -101,13 +113,6 @@ function setGame(mode) {
       document.getElementById('board').append(tile);
     }
   }
-}
-
-function restartGame() {
-  clearBoard();
-  errors = 0;
-  updateScore(errors);
-  setGame();
 }
 
 // create a function to select different numbers from the available options

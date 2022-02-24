@@ -13,14 +13,20 @@ body {
   color: black;
 }
 
-/* 4x4 grid */
 #board {
-  width: 450px;
-  height: 450px;
-
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.easy {
+  width: 328px;
+  height: 328px;
+}
+.hard {
+  width: 450px;
+  height: 450px;
 }
 
 /* each cell inside of the grid */
@@ -35,6 +41,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.easy .tile {
+  width: 80px;
+  height: 80px;
 }
 
 /* each number that fills the board */
