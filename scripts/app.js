@@ -4,11 +4,9 @@ const restartButton = document.getElementById('restartButton');
 let gridSize;
 let solution;
 let gameMode;
-
 let errors = 0;
 
 // STARTING BOARD
-
 const easyboard = ['13--', '-2-3', '3-2-', '--31'];
 
 const easysolution = ['1342', '4213', '3124', '2431'];
@@ -54,7 +52,7 @@ function restartGame() {
   setMode(gameMode);
 }
 
-//  create a function to clear the board
+//  create a function to clear the board so that we can access it according the mode choosen
 function clearBoard() {
   const board = document.getElementById('board');
   while (board.firstChild) {
@@ -101,7 +99,7 @@ function setGame(mode) {
     document.getElementById('digits').appendChild(number);
   }
 
-  // board
+  // creates the board using as many divs as needed according the mode chosen
   for (let r = 0; r < gridSize; r++) {
     for (let c = 0; c < gridSize; c++) {
       // create div
@@ -151,6 +149,10 @@ function selectTile() {
       updateScore(errors);
       if (errors >= 3) {
         updateScore('Game Over!');
+        // after two seconds it restarts automatically
+        setTimeout(() => {
+          restartGame();
+        }, 2000);
       }
     }
   }

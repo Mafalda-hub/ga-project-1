@@ -1,6 +1,6 @@
 <!-- h1 -->
 
-# Project 1
+# Project 1 : Sudoku game
 
 <!-- h2 -->
 
