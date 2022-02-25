@@ -47,12 +47,14 @@ function setMode(mode) {
   setGame(mode);
 }
 
+// create a board to start again in the same mode
 function restartGame() {
   errors = 0;
   updateScore(errors);
   setMode(gameMode);
 }
 
+//  create a function to clear the board
 function clearBoard() {
   const board = document.getElementById('board');
   while (board.firstChild) {
@@ -64,6 +66,7 @@ function clearBoard() {
   }
 }
 
+//  create a function to get the correct grid, solution and gameboard to start the game
 function setGame(mode) {
   let gameboard;
   const boardElement = document.getElementById('board');
@@ -98,7 +101,7 @@ function setGame(mode) {
     document.getElementById('digits').appendChild(number);
   }
 
-  // board 9x9
+  // board
   for (let r = 0; r < gridSize; r++) {
     for (let c = 0; c < gridSize; c++) {
       // create div
@@ -153,6 +156,7 @@ function selectTile() {
   }
 }
 
+//  create a function to update the score, either increase or restart
 function updateScore(value) {
   document.getElementById('errors').innerText = value;
 }
