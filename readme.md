@@ -177,11 +177,11 @@ function restartGame() {
 
 ## Bugs, Blockers & Wins
 
-After three wrong answers on each board it shows a message of “game over '', that’s definitely a win. However, if you complete the board it doesnt show a message saying “Congrats, you won!”, yet.
+After three wrong answers on each board, it shows a message of “game over '', that’s definitely a win. However, if you complete the board, it doesnt show a message saying “Congrats, you won!”, yet.
 
 ## Future Features & Key Learnings
 
 - Random generator
 - Set a timer
 - Do a registration and login page so that we can save your own score and see if you can beat your best score
-- When you’re playing on your desktop it will allow you to select the numbers on your keyboard instead of selecting them from the options shown in your screen.
+- When you’re playing on your desktop, it will allow you to select the numbers on your keyboard instead of selecting them from the options shown on your screen.
